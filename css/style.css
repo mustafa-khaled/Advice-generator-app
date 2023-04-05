@@ -1,0 +1,156 @@
+/* GLOBAL RULES */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    color: var(--light-cyan);
+}
+
+/* GLOBAL RULES */
+
+/* MAIN SECTION  */
+
+.content{
+    text-align: center;
+    width: 500px;
+    background-color: var(--dark-grayish-blue);
+    padding: 20px 20px 70px;
+    margin-bottom: 80px;
+    line-height: 1.8;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#advice-id {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#advice-text {
+    font-size: 28px;
+    padding: 20px 0;
+}
+
+.content .image {
+    margin-top: 30px;
+}
+
+button {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    cursor: pointer;
+    background-color: var(--neon-green);
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+button:hover{
+    box-shadow: 0 0 40px var(--neon-green);
+}
+
+.hidden {
+    display: none;
+}
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    }
+    
+    @keyframes lds-dual-ring {
+        0% {
+        transform: rotate(0deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+    }
+    
+
+@media (max-width: 550px){
+    .content {
+        width: 350px;
+    }
+
+    .content .image {
+        content: url(../images/pattern-divider-mobile.svg);
+    }
+}
+/* MAIN SECTION  */
+
+
+/* FOOTER  */
+
+    .attribution { 
+        font-size: 11px; text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%); 
+    }
+
+/* FOOTER  */
